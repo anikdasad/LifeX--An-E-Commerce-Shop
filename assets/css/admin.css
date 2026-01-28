@@ -1,0 +1,21 @@
+/* Admin pages reuse same theme but add small layout helpers */
+.admin-wrap{display:grid;grid-template-columns: 240px 1fr;gap:12px;align-items:start}
+@media (max-width: 900px){.admin-wrap{grid-template-columns:1fr}}
+.sidebar{
+  position:sticky;top:64px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  border-radius:18px;
+  padding:12px;
+}
+.sidebar a{
+  display:block;padding:10px 10px;border-radius:14px;
+  border:1px solid transparent;
+  color:var(--muted);
+}
+.sidebar a:hover{background:rgba(255,255,255,.05);color:var(--text)}
+.sidebar a.active{border-color:rgba(124,242,255,.35);background:rgba(124,242,255,.08);color:var(--text)}
+.admin-title{margin:0 0 8px}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width: 900px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+@media (max-width: 520px){.kpi-row{grid-template-columns:1fr}}
